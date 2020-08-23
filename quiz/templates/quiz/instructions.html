@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- {% load static %} -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructions - Schrödinger's Syndrome</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="{% static 'css/instructions.css' %}"> -->
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("startquiz").onclick = function () {
+                location.href = "{% url 'quiz:quiz' %}";
+            };
+        };
+    </script>
+
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>INSTRUCTIONS</h1>
+        </div>
+    </div>
+    <div class="container">
+        <ul>
+            <li> The time limit for the event is 40 mins</li>
+            <li> There will be 20 questions in total.</li>
+            <li> There will be only a single chance given to answer a particular question.</li>
+            <li> Whether or not your answer is correct you will move ahead.</li>
+            <li> You can’t pass a question.</li>
+            <li> You get 2 minutes to answer each question</li>
+            <li> Keep a pen and paper handy for basic calculations.</li>
+            <li> Moving back and forth to the previous question and the next question is not possible.</li>
+            <li> The score of your performance will be displayed only after the completion of all the questions.</li>
+            <li> The time displayed at the top is the time remaining to answer the question</li>
+            <li> Do not reload the page once the test starts</li>
+        </ul>
+        <button id="startquiz" class="btn btn-lg btn-primary mr-2">Start quiz</button>
+        <a href="{% url 'quiz:logout' %}"><small>(Signed in as '{{user.username}}'. Sign out!)</small></a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
