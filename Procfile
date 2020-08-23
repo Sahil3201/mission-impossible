@@ -1,1 +1,1 @@
-web: gunicorn que.wsgi
+web: gunicorn missionimpossible.wsgi
