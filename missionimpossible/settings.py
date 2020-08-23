@@ -77,8 +77,13 @@ WSGI_APPLICATION = 'missionimpossible.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'mission-impossible',
+        'USER':'postgres',
+        'PASSWORD': 'Sahil@123',
+        'HOST': '127.0.0.1',
+        'POST': '5432',
     }
 }
 

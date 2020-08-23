@@ -12,7 +12,7 @@ data = [
 ]
 
 import os
-os.environ.setdefault('DJANGO_SETTINGS_MODULE','que.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE','missionimpossible.settings')
 
 import django
 django.setup()
