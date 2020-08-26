@@ -1,19 +1,19 @@
-$(document).ready(function () {
-    var distance = 120;
-    var time_remaining = $("#time_remaining").val()
-    distance=time_remaining
-    var x = setInterval(function () {
-        distance = distance - 1; ///////////
-        var minutes = Math.floor(distance / 60);
-        var seconds = Math.floor(distance - minutes * 60);
-        document.getElementById("time").innerHTML = ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);//minutes + "m " + seconds + "s ";
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("time").innerHTML = "TIME'S UP";
-            document.getElementById("submit").click();
-        }
-    }, 1000);
-})
+// $(document).ready(function () {
+//     var distance = 120;
+//     var time_remaining = $("#time_remaining").val()
+//     distance=time_remaining
+//     var x = setInterval(function () {
+//         distance = distance - 1; ///////////
+//         var minutes = Math.floor(distance / 60);
+//         var seconds = Math.floor(distance - minutes * 60);
+//         document.getElementById("time").innerHTML = ('0' + minutes).slice(-2) + ':' + ('0' + seconds).slice(-2);//minutes + "m " + seconds + "s ";
+//         if (distance < 0) {
+//             clearInterval(x);
+//             document.getElementById("time").innerHTML = "TIME'S UP";
+//             document.getElementById("submit").click();
+//         }
+//     }, 1000);
+// })
 
 // $(document).ready(function () {
 //     $('#submit').click(function (){
