@@ -21,7 +21,6 @@ class Student(AbstractUser):
 	username		= models.IntegerField(unique=True)
 	password 		= models.CharField(max_length=255)
 	shown_at_time	= models.IntegerField(null=True,blank=True)
-	
 	ques_answered 	= models.IntegerField(blank=True, null=True, default=0) #Questions correctly answered
 	attempt_for_q 	= models.SmallIntegerField(blank=True,null=True,default=5) #attempts remaining for the last attempted question
 	# que_anwered = models.IntegerField(blank=True, null=True,default=0)
