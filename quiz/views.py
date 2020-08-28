@@ -20,7 +20,7 @@ qna = [
     ('From the beginning of eternity to the end of time and space. To the beginning of everything and end of every place.', 'Basel'),
     ('Keep to the left and I mean nothing. Put me on the right and i change everything. But beyond a point the rules change. Coz after that point I play an opposite game.', 'Pataliputra'),
     (' This person was a genius at decrypting messages by a machine whose name matches with the annual cultural fest of R.A. Podar College during WW2.', 'London'),
-    ('Hint:<br>1st word: The football team which was nicknamed "Invincibles" in the 2003-04 season<br>2nd word: The inverse of a trigonometric function','ARSENAL TAN'),
+    ('From the last letter of each city, prepare an anagram<br>Samos<br>Alexandria<br>Syracuse<br>Pisa<br>Merchiston Tower<br>Weil der stadt<br>London<br>Basel<br>Pataliputra<br>London<br>Hint:<br>1st word: The football team which was nicknamed "Invincibles" in the 2003-04 season<br>2nd word: The inverse of a trigonometric function','ARSENAL TAN'),
 ]
 import time
 @login_required
