@@ -32,12 +32,12 @@ def quiz_page(request):
         q_no = usr.ques_answered  # index from 0
         ans = request.POST['answer']
         if qna[q_no][1].lower() == ans.lower():
-            print('CORRECT!')
             usr.ques_answered = usr.ques_answered + 1
             usr.attempt_for_q = 5
+            if q_no == 10:
+                usr.attempt_for_q = 3
             usr.save()
         else:
-            print("INCORRECT")
             usr.attempt_for_q = usr.attempt_for_q - 1
             usr.save()
 
@@ -62,8 +62,6 @@ def quiz_page(request):
         context['q_no'] = "Question number: " + str(q_no+1)
 
         if q_no == 10:
-            usr.attempt_for_q = 3
-            usr.save()
             context['q_no'] = "Find the Anagram:"
         
         context['time_remaining'] = time_remaining
