@@ -67,7 +67,7 @@ def quiz_page(request):
         
         context['time_remaining'] = time_remaining
         context['que_statement'] = qna[q_no][0]# + "-" + qna[q_no][1]
-
+        context['tries_left'] = 'Attempts Left = '+str(usr.attempt_for_q)
         return render(request, "quiz/quiz.html", context=context)
 
 class instructions(LoginRequiredMixin, generic.TemplateView):
