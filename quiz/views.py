@@ -31,7 +31,7 @@ def quiz_page(request):
     if request.method == "POST":
         q_no = usr.ques_answered  # index from 0
         ans = request.POST['answer']
-        if qna[q_no][1].lower() == ans.lower():
+        if qna[q_no][1].lower().replace(' ','') == ans.lower().replace(' ',''):
             usr.ques_answered = usr.ques_answered + 1
             usr.attempt_for_q = 5
             if q_no == 10:
